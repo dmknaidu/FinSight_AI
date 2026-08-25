@@ -1,0 +1,101 @@
+dataset:
+  name: paysim_transactions
+  version: "1.0"
+  description: >
+    Schema contract for the raw PaySim financial transaction dataset.
+
+columns:
+
+  step:
+    dtype: integer
+    nullable: false
+    description: >
+      Time step associated with the transaction.
+    constraints:
+      min: 0
+
+  type:
+    dtype: string
+    nullable: false
+    description: >
+      Transaction type.
+    allowed_values:
+      - CASH_IN
+      - CASH_OUT
+      - DEBIT
+      - PAYMENT
+      - TRANSFER
+
+  amount:
+    dtype: float
+    nullable: false
+    description: >
+      Transaction amount.
+    constraints:
+      min: 0
+
+  nameOrig:
+    dtype: string
+    nullable: false
+    description: >
+      Originating entity identifier.
+    constraints:
+      min_length: 1
+
+  oldbalanceOrg:
+    dtype: float
+    nullable: false
+    description: >
+      Origin entity balance before the transaction.
+    constraints:
+      min: 0
+
+  newbalanceOrig:
+    dtype: float
+    nullable: false
+    description: >
+      Origin entity balance after the transaction.
+    constraints:
+      min: 0
+
+  nameDest:
+    dtype: string
+    nullable: false
+    description: >
+      Destination entity identifier.
+    constraints:
+      min_length: 1
+
+  oldbalanceDest:
+    dtype: float
+    nullable: false
+    description: >
+      Destination entity balance before the transaction.
+    constraints:
+      min: 0
+
+  newbalanceDest:
+    dtype: float
+    nullable: false
+    description: >
+      Destination entity balance after the transaction.
+    constraints:
+      min: 0
+
+  isFraud:
+    dtype: integer
+    nullable: false
+    description: >
+      Ground-truth fraud indicator.
+    allowed_values:
+      - 0
+      - 1
+
+  isFlaggedFraud:
+    dtype: integer
+    nullable: false
+    description: >
+      PaySim flagged-fraud indicator.
+    allowed_values:
+      - 0
+      - 1
