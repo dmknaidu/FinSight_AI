@@ -1,58 +1,68 @@
 # FinSight AI
 
-FinSight AI is an end-to-end financial risk and fraud intelligence platform designed to demonstrate production-oriented Data Science, Machine Learning, AI Engineering, and Agentic AI capabilities.
+> An end-to-end financial risk and fraud intelligence platform combining Data Science, Machine Learning, Explainable AI, Graph Intelligence, Generative AI, and Agentic AI.
 
-## Project Status
+**Status:** 🚧 Under active development  
+**Current Phase:** Phase 0 — Dataset Forensics  
+**Primary Domain:** FinTech / Financial Risk / Fraud Detection
 
-🚧 Currently in development
+---
 
-### Completed
+## Overview
 
-- [x] Phase 0 — Dataset Forensics
+FinSight AI is a production-oriented financial risk intelligence platform designed to demonstrate how modern Data Science, Machine Learning, and AI Engineering techniques can be combined to address real-world financial fraud and transaction-risk problems.
 
-### Upcoming
+The project starts with transaction-level fraud detection and progressively evolves into a broader financial intelligence platform capable of:
 
-- [ ] Phase 1 — Data Engineering
-- [ ] Phase 2 — Data Analytics
-- [ ] Phase 3 — Statistical Data Science
-- [ ] Phase 4 — Feature Engineering
-- [ ] Phase 5 — Fraud Detection ML
-- [ ] Phase 6 — Explainable AI
-- [ ] Phase 7 — Risk Decision Engine
-- [ ] Phase 8 — Graph Intelligence
-- [ ] Phase 9 — MLOps
-- [ ] Phase 10 — RAG
-- [ ] Phase 11 — Agentic Investigation
-- [ ] Phase 12 — FastAPI
-- [ ] Phase 13 — Dashboard
-- [ ] Phase 14 — Deployment
+- analyzing financial transactions,
+- identifying fraudulent and anomalous behavior,
+- generating behavioral risk signals,
+- explaining model decisions,
+- analyzing relationships between financial entities,
+- monitoring model and data health,
+- retrieving relevant financial-risk knowledge,
+- assisting analysts with investigations,
+- and exposing risk intelligence through APIs and an analyst-facing interface.
 
-## Dataset
+The project is intentionally being developed incrementally, with each phase validated before the next phase begins.
 
-The project uses the PaySim financial transaction dataset.
+---
 
-The raw dataset is intentionally not committed to this repository.
+# Problem Statement
 
-## Phase 0 — Dataset Forensics
+Financial institutions and FinTech platforms process millions of transactions every day. Detecting fraudulent transactions is challenging because:
 
-The initial forensic analysis verified:
+1. Fraud represents only a very small fraction of total transaction volume.
+2. Fraudulent behavior can vary across transaction types.
+3. Transaction amounts can be highly skewed.
+4. Entity behavior can be sparse or highly interconnected.
+5. Fraud patterns can change over time.
+6. False positives can create unnecessary investigation costs.
+7. False negatives can result in direct financial losses.
+8. Fraud models need to be explainable to analysts and business stakeholders.
+9. A prediction alone is often insufficient; investigators need supporting evidence and context.
 
-- 6,362,620 transactions
-- 11 columns
-- 743 temporal steps
-- 8,213 fraudulent transactions
-- 0.129082% fraud rate
-- No missing values
-- No completely duplicated rows
+FinSight AI aims to address these challenges through a layered risk-intelligence architecture rather than treating fraud detection as a simple binary classification problem.
 
-Further analysis examined transaction types, transaction amounts, temporal behavior, entity relationships, balance behavior, and `isFlaggedFraud`.
+---
 
-## Technology Stack
+# Project Vision
 
-Python  
-Pandas  
-NumPy  
-Matplotlib  
-Seaborn
+The long-term goal is to build a system that can move from:
 
-The technology stack will expand as the project progresses.
+```text
+Transaction
+    ↓
+Risk Assessment
+    ↓
+Behavioral Analysis
+    ↓
+Explainability
+    ↓
+Entity / Graph Intelligence
+    ↓
+Knowledge Retrieval
+    ↓
+AI-Assisted Investigation
+    ↓
+Risk Decision
